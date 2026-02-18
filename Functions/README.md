@@ -38,6 +38,7 @@ Stack after one instruction executed: (Cant see any values in red, so will need 
    20 = 14
 
 ## Updated code:
+```cpp
 #include <iostream>
 using namespace std;
 
@@ -66,10 +67,11 @@ int main() {
 
     return 0;
 }
-
+```
 # Reflection - need to improve
 
 With the code changed: here is what I noticed:
 char is promoted to int before pushing.
 double takes 8 bytes on the stack.
 The caller cleans up the stack after the call (add esp, N)
+
