@@ -68,13 +68,16 @@ Dissamsembly:
 New register used:
 1. xmm0 -
 New size value being used in memory:
-1. mmword ptr - 8 bytes 
+1. mmword ptr - 8 bytes
+
+Overall: Each type has their own size value?
 
 
 <img width="673" height="222" alt="image" src="https://github.com/user-attachments/assets/4843e44e-b18f-4631-8748-bacc29da2bbe" />
 
 Memory stack: 
 <img width="1015" height="199" alt="image" src="https://github.com/user-attachments/assets/7592ab75-bdc9-4db2-971a-38b99f5c9162" />
+
 
 
 
