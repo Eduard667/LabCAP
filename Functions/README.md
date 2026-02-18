@@ -60,7 +60,7 @@ int main() {
     return 0;
 }
 ```
-# Reflection - need to improve
+# Reflection
 
 Dissamsembly:
 <img width="570" height="157" alt="image" src="https://github.com/user-attachments/assets/31801169-f44f-404f-a1d0-f03157eea36e" />
@@ -75,6 +75,7 @@ New size value being used in memory:
 
 Memory stack: 
 <img width="1015" height="199" alt="image" src="https://github.com/user-attachments/assets/7592ab75-bdc9-4db2-971a-38b99f5c9162" />
+
 
 
 
