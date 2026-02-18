@@ -7,27 +7,13 @@ Reigsters being used during the execution of the program
 
 # Memory
 Looking at the stack while running the program
-<img width="1739" height="176" alt="Screenshot 2026-02-17 200042" src="https://github.com/user-attachments/assets/b8241266-6f31-4173-b716-ef08feec7df8" />
-<img width="1881" height="327" alt="Screenshot 2026-02-17 200021" src="https://github.com/user-attachments/assets/39aec9ec-9b2f-4622-b3da-338fb13f72ae" />
+1. B is copied onto register eax.
+   B = 14 in hex
 
-Original Stack: (Cant see any values in red, so will need to continue on school computers)
-<img width="1523" height="703" alt="image" src="https://github.com/user-attachments/assets/bbc3b8c9-9722-4fd1-8eeb-42d8f2a7dd8b" />
+<img width="1018" height="191" alt="image" src="https://github.com/user-attachments/assets/eebddcaa-e98b-44e5-b325-abaaeb8f4397" />
 
-Stack after one instruction executed: (Cant see any values in red, so will need to continue on school computers)
-<img width="1538" height="738" alt="image" src="https://github.com/user-attachments/assets/ff6f080c-92cd-4f14-a258-8510460ae1ff" />
-
-
----
-
-
-
-# Data Sizes - Updated code: 
-0x0018FE15  cc cc cc cc cc cc cc cc cc cc cc cc cc  ÌÌÌÌÌÌÌÌÌÌÌÌÌ
-0x0018FE22  cc cc cc cc cc cc cc cc cc cc cc cc cc  ÌÌÌÌÌÌÌÌÌÌÌÌÌ
-0x0018FE2F  cc 0a 00 00 00 14 00 00 00 00 00 00 00  Ì............
-0x0018FE3C  00 00 00 00 00 e0 fd 7e cc cc cc cc cc  .....àý~ÌÌÌÌÌ
-0x0018FE49  cc cc cc cc cc cc cc cc cc cc cc cc cc  ÌÌÌÌÌÌÌÌÌÌÌÌÌ
-0x0018FE56  cc cc cc cc cc cc cc cc cc cc cc cc cc  ÌÌÌÌÌÌÌÌÌÌÌÌÌ 
+2. A is copied to register ecx
+   A = 0a in hex
 
 1. How many bytes do "a" and "b" occupy in memory?
    We know that each 32 bit integer is 4 bytes, or a dword, (a word is 2 bytes)
@@ -36,6 +22,12 @@ Stack after one instruction executed: (Cant see any values in red, so will need 
    Values are represented in hex
    10 = 0x0A
    20 = 14
+
+
+---
+
+
+# Data Sizes
 
 ## Updated code:
 ```cpp
@@ -70,8 +62,21 @@ int main() {
 ```
 # Reflection - need to improve
 
-With the code changed: here is what I noticed:
-char is promoted to int before pushing.
-double takes 8 bytes on the stack.
-The caller cleans up the stack after the call (add esp, N)
+Dissamsembly:
+<img width="570" height="157" alt="image" src="https://github.com/user-attachments/assets/31801169-f44f-404f-a1d0-f03157eea36e" />
+
+New register used:
+1. xmm0 -
+New size value being used in memory:
+1. mmword ptr - 8 bytes 
+
+
+<img width="673" height="222" alt="image" src="https://github.com/user-attachments/assets/4843e44e-b18f-4631-8748-bacc29da2bbe" />
+
+Memory stack: 
+<img width="1015" height="199" alt="image" src="https://github.com/user-attachments/assets/7592ab75-bdc9-4db2-971a-38b99f5c9162" />
+
+
+
+
 
